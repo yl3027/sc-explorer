@@ -85,7 +85,7 @@ function [ scobjs ] = sc_genobjs( d, n, subs, varargin )
     pts_sub = sum(pts_sub, 1)+1;
     
     % sub_pts: specify a subspace index, get its point index
-    sub_pts = arrayfun(@(i) find(pts_sub == i), 1:5, 'UniformOutput', false);
+    sub_pts = arrayfun(@(k) find(pts_sub == k), 1:K, 'UniformOutput', false);
 
     % Finally, randomly put the point on the associated subspace
     for i = 1:n
